@@ -1,10 +1,11 @@
 import React, { Component } from "react";
- 
+import DataTable from "./Components/Data/dataTable.js"
+
 class Rankings extends Component {
   render() {
     return (
       <div>
-        <h2>Rankings</h2>
+        <DataTable />
       </div>
     );
   }
