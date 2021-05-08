@@ -11,7 +11,6 @@ import Login from "./login";
 import Logout from "./logout";
 import Rankings from "./rankings";
 import Register from "./register";
-import Search from "./search";
 
 
 class Main extends Component {
@@ -30,7 +29,6 @@ class Main extends Component {
                         <div class="navbar-start">
                         <NavLink to="/Home" class="navbar-item">Home</NavLink>
                         <NavLink to="/rankings" class="navbar-item">Rankings</NavLink>
-                        <NavLink to="/search" class="navbar-item">Search</NavLink>
                         <NavLink to="/factors" class="navbar-item">Factors</NavLink>
                         </div>
                         <div class="navbar-end">
@@ -47,7 +45,6 @@ class Main extends Component {
                 <div className="content">
                                 <Route path="/Home" component={Home} />
                                 <Route path="/rankings" component={Rankings} />
-                                <Route path="/search" component={Search} />
                                 <Route path="/factors" component={Factors} />
                                 <Route path="/register" component={Register} />
                                 <Route path="/login" component={Login} />
