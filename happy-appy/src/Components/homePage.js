@@ -17,7 +17,7 @@ class HomePage extends Component {
                     </div>
                 </section>
                 <section class="section">
-                    <h1 class="title">United Nations</h1>
+                    <h1 class="title">United Nation Happiness Survey</h1>
                     <p>The World Happiness Report is a landmark survey of the state of global happiness that ranks 156 countries by how happy their citizens perceive themselves to be. The World Happiness Report 2020 for the first time ranks cities around the world by their subjective well-being and digs more deeply into how the social, urban and natural environments combine to affect our happiness.
                     </p>
                 </section>

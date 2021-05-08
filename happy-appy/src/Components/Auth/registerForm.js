@@ -27,10 +27,15 @@ export default function RegisterForm() {
                 <div class="container is-max-desktop">
                     <h1 class="title is-1">Register</h1>
                 </div>
-                <form onSubmit={submit()}>
+                <form onSubmit={(event) => {
+                    event.preventDefault();
+                    submit();
+                    }}
+                    >
                     <div class="field">
                         <p class="control has-icons-left has-icons-right">
                             <input
+                                id="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}                                name="Email"
                                 type="email"
@@ -48,6 +53,7 @@ export default function RegisterForm() {
                     <div class="field">
                         <p class="control has-icons-left has-icons-right">
                             <input
+                                id="password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}                                name="password"
                                 type="password"

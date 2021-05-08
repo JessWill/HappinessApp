@@ -27,7 +27,11 @@ export default function RegisterForm() {
                 <div class="container is-max-desktop">
                     <h1 class="title is-1">Login</h1>
                 </div>
-                <form onSubmit={submit()}>
+                <form onSubmit={(event) => {
+                    event.preventDefault();
+                    submit();
+                    }}
+                    >
                     <div class="field">
                         <p class="control has-icons-left has-icons-right">
                             <input
