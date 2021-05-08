@@ -5,7 +5,12 @@ class Rankings extends Component {
   render() {
     return (
       <div>
-        <DataTable />
+        <div class="container">
+          <h1>Rankings</h1>
+        </div>
+        <div>
+          <DataTable />
+        </div>
       </div>
     );
   }
