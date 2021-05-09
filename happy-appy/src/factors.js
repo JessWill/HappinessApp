@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import FactorsTable from "./Components/tables/factorsTable.js";
-import SearchBar from "./Components/search/searchBar";
 import YearSelector from "./Components/yearSelector.js"
 
 const columns = [

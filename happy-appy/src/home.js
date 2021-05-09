@@ -22,10 +22,16 @@ class HomePage extends Component {
                     </p>
                 </section>
                 <section>
+                    <p>
+                        To access the "Factors" please register and login
+                    </p>
+                </section>
+                <section>
                     <figure class="image is-2463x1642">
                     <img src={sunflowerpicture} alt="Happy girls with sunflowers"/>
                     </figure>
                 </section>
+
             </div>
         );
     }

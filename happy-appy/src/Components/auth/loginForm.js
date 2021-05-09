@@ -16,6 +16,7 @@ export default function RegisterForm() {
             body: JSON.stringify({ email: email, password: password })
         })
             .then((res) => res.json())
+            .then(alert("Logged In Successfully"))
             .then((res) => {
                 localStorage.setItem("token", res.token)
             })

@@ -1,8 +1,5 @@
-import React, { Component, useState } from "react";
-import SearchBar from "./Components/search/searchBar";
-import useRankings from "./Components/search/useRankings";
+import React from "react";
 import RankingsTable from "./Components/tables/rankingsTable";
-import YearSelector from "./Components/yearSelector";
 
 
 const columns = [
@@ -14,8 +11,6 @@ const columns = [
 
 
 export default function Rankings(){
-  const [search, setSearch] = useState('');
-  const {loading, Rankings, error} = useRankings();
   return (
     <div>
       <div class="container">

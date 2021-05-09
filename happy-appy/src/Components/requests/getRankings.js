@@ -1,7 +1,4 @@
-export default function GetRankingsByQuery(search) {
-    const API_URL = "http://131.181.190.87:3000/rankings"
-    const url= `${API_URL}?country=${search}`
-
+export default function GetRankings(url) {
 
     return fetch(url)
         .then(res => res.json())

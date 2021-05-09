@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import SearchBar from "./Components/search/searchBar";
 import useRankings from "./Components/search/useRankings";
 import DisplayTable from "./Components/tables/displayTable";
@@ -12,7 +12,7 @@ const columns = [
 
 export default function Search(){
   const [search, setSearch] = useState('');
-  const {loading, rankings, erro} = useRankings(search);
+  const { rankings } = useRankings(search);
 
   return (
     <div>

@@ -12,7 +12,6 @@ import Logout from "./logout";
 import Rankings from "./rankings";
 import Register from "./register";
 import Search from "./search";
-import { PrivateRoute } from "./Components/auth/privateRoute";
 
 
 
@@ -21,11 +20,6 @@ class Main extends Component {
         return (
             <HashRouter>
                 <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                    <a class="navbar-item" href="/">
-                        <img src="https://www.directivegroup.com/wp-content/uploads/2017/03/smile-9047-9380-hd-wallpapers-1.jpg" width="50" height="50" alt="smiley face"></img>
-                    </a>
-                </div>
                     <div id="navbarBasicExample" class="navbar-menu">
                         <div class="navbar-start">
                         <NavLink to="/Home" class="navbar-item">Home</NavLink>
@@ -38,7 +32,7 @@ class Main extends Component {
                                 <div class="buttons">
                                     <NavLink to="/register" class="button is-light">Register</NavLink>
                                     <NavLink to="/login" class="button is-light">Login</NavLink>
-                                    <NavLink to="/logout" class="button is-light">Logout</NavLink>
+                                    {/* <NavLink to="/logout" class="button is-light">Logout</NavLink> */}
                                 </div>
                             </div>
                         </div>
@@ -48,10 +42,10 @@ class Main extends Component {
                                 <Route path="/Home" component={Home} />
                                 <Route path="/register" component={Register} />
                                 <Route path="/login" component={Login} />
-                                <PrivateRoute path="/rankings" component={Rankings} />
-                                <PrivateRoute path="/factors" component={Factors} />
-                                <PrivateRoute path="/search" component={Search} />
-                                <PrivateRoute path="/Logout" component={Logout} />
+                                <Route path="/rankings" component={Rankings}/>
+                                <Route path="/factors" component={Factors} />
+                                <Route path="/search" component={Search} />
+                                {/* <Route path="/Logout" component={Logout} /> */}
                 </div>
             </HashRouter>
         );
