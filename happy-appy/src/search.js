@@ -1,11 +1,7 @@
 import React, { Component, useState } from "react";
 import SearchBar from "./Components/search/searchBar";
 import useRankings from "./Components/search/useRankings";
-import RankingsTable from "./Components/tables/rankingsTable";
-import GetRankingsByQuery from "./Components/requests/getRankingsByQuery.js"
-
-import yearSelector from "./Components/yearSelector";
-
+import DisplayTable from "./Components/tables/displayTable";
 
 const columns = [
   { headerName: "Rank", field: "rank", sortable:"true"},
@@ -14,21 +10,20 @@ const columns = [
   { headerName: "Year", field: "year", sortable: "true"},
 ]
 
-
-export default function Rankings(){
+export default function Search(){
   const [search, setSearch] = useState('');
-  const {loading, Rankings, error} = useRankings();
+  const {loading, rankings, erro} = useRankings(search);
+
   return (
     <div>
       <div class="container">
-        <h1>Rankings</h1>
-      </div>
-      
-      <div>
-        <yearSelector/>
+        <h1>Search</h1>
       </div>
       <div>
-        <RankingsTable api="rankings" columns={columns}/>
+        <SearchBar onSubmit={setSearch}/>
+      </div>
+      <div>
+        <DisplayTable columns={columns} rows={rankings}/>
       </div>
     </div>
   );

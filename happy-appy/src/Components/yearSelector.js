@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function yearSelector(props) {
+export default function YearSelector() {
 
     return (
         <div>

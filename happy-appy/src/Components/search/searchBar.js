@@ -5,31 +5,27 @@ import "ag-grid-community/dist/styles/ag-theme-balham.css";
 const API_URL = "http://131.181.190.87:3000/"
 
 export default function SearchBar(props) {
-    const {onSearch} = props;
-    const [searchText,setSearchText] = useState("")
-
-    const handleInput = (e) => {
-        const text = e.target.value
-        setSearchText(searchText)
-    }
-
-    const handleEnterKeyPressed = (e) => {
-        if(e.key === 'Enter'){
-            onSearch(searchText)
-        }
-    }
+    const [innerSearch,setInnerSearch] = useState("");
 
     return (
-        <div class="container is-max-desktop">
-            <input
-                aria-labelledby="search-button"
-                class="input"
-                type="text"
-                placeholder="Search Factors"
-                value = {searchText}
-                onChange={handleInput}
-                onKeyPress={handleEnterKeyPressed}
+        <div>
+            <input 
+            aria-labelledby="search-button" 
+            name="search" 
+            id="search" 
+            type="search" 
+            onChange={(e) => {
+                e.preventDefault();
+                setInnerSearch(e.target.value)
+            }}
             />
+            <button 
+            id="search-button" 
+            type="button"
+            onClick={()=> props.onSubmit(innerSearch)}
+            >
+                Search
+            </button>
         </div>
-    );
+        );
 }

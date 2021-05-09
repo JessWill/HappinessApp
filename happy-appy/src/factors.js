@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FactorsTable from "./Components/tables/factorsTable.js";
 import SearchBar from "./Components/search/searchBar";
+import YearSelector from "./Components/yearSelector.js"
 
 const columns = [
   { headerName: "Rank", field: "rank", sortable: "true" },
@@ -21,7 +22,7 @@ export default function Factors() {
         <h1>Factors</h1>
       </div>
       <div>
-        <SearchBar/>
+        <YearSelector/>
       </div>
       <div>
         <FactorsTable api="factors" year="/2020" columns={columns} />
