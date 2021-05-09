@@ -17,7 +17,7 @@ export default function Search(){
   return (
     <div>
       <div class="container">
-        <h1>Search</h1>
+        <h1>Find Out How Your Country Scored</h1>
       </div>
       <div>
         <SearchBar onSubmit={setSearch}/>

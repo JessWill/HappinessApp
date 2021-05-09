@@ -16,16 +16,18 @@ const columns = [
 ]
 
 export default function Factors() {
+  const [year,setYear] =useState('2020');
+
   return (
     <div>
       <div class="container">
         <h1>Factors</h1>
       </div>
       <div>
-        <YearSelector/>
+        <YearSelector onSubmit={setYear}/>
       </div>
       <div>
-        <FactorsTable api="factors" year="/2020" columns={columns} />
+        <FactorsTable api="factors/" year={year} columns={columns} />
       </div>
     </div>
   );

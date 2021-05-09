@@ -2,9 +2,7 @@ import React, { Component, useState } from "react";
 import SearchBar from "./Components/search/searchBar";
 import useRankings from "./Components/search/useRankings";
 import RankingsTable from "./Components/tables/rankingsTable";
-import GetRankingsByQuery from "./Components/requests/getRankingsByQuery.js"
-
-import yearSelector from "./Components/yearSelector";
+import YearSelector from "./Components/yearSelector";
 
 
 const columns = [
@@ -23,10 +21,7 @@ export default function Rankings(){
       <div class="container">
         <h1>Rankings</h1>
       </div>
-      
-      <div>
-        <yearSelector/>
-      </div>
+
       <div>
         <RankingsTable api="rankings" columns={columns}/>
       </div>
