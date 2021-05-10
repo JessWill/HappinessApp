@@ -8,11 +8,11 @@ import {
 import Home from "./content/home";
 import Factors from "./content/factors";
 import Login from "./content/login";
-import Logout from "./content/logout";
 import Rankings from "./content/rankings";
 import Register from "./content/register";
 import Search from "./content/search";
 import PrivateRoute from "./routes/privateRoute";
+import Logout from "./content/logout";
 
 
 
@@ -33,7 +33,7 @@ class Main extends Component {
                                 <div class="buttons">
                                     <NavLink to="/register" class="button is-light">Register</NavLink>
                                     <NavLink to="/login" class="button is-light">Login</NavLink>
-                                    {/* <NavLink to="/logout" class="button is-light">Logout</NavLink> */}
+                                    <NavLink to="/logout" class="button is-light">Logout</NavLink> 
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@ class Main extends Component {
                                 <PrivateRoute path="/rankings" component={Rankings}/>
                                 <PrivateRoute path="/factors" component={Factors} />
                                 <PrivateRoute path="/search" component={Search} />
-                                {/* <Route path="/Logout" component={Logout} /> */}
+                                <Route path="/Logout" component={Logout} />
                 </div>
             </HashRouter>
         );
