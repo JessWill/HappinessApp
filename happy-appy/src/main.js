@@ -5,13 +5,14 @@ import {
     NavLink,
     HashRouter
 } from "react-router-dom";
-import Home from "./home";
-import Factors from "./factors";
-import Login from "./login";
-import Logout from "./logout";
-import Rankings from "./rankings";
-import Register from "./register";
-import Search from "./search";
+import Home from "./content/home";
+import Factors from "./content/factors";
+import Login from "./content/login";
+import Logout from "./content/logout";
+import Rankings from "./content/rankings";
+import Register from "./content/register";
+import Search from "./content/search";
+import PrivateRoute from "./routes/privateRoute";
 
 
 
@@ -42,9 +43,9 @@ class Main extends Component {
                                 <Route path="/Home" component={Home} />
                                 <Route path="/register" component={Register} />
                                 <Route path="/login" component={Login} />
-                                <Route path="/rankings" component={Rankings}/>
-                                <Route path="/factors" component={Factors} />
-                                <Route path="/search" component={Search} />
+                                <PrivateRoute path="/rankings" component={Rankings}/>
+                                <PrivateRoute path="/factors" component={Factors} />
+                                <PrivateRoute path="/search" component={Search} />
                                 {/* <Route path="/Logout" component={Logout} /> */}
                 </div>
             </HashRouter>

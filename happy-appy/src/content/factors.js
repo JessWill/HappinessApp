@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import FactorsTable from "./Components/tables/factorsTable.js";
-import YearSelector from "./Components/yearSelector.js"
+import FactorsTable from "../components/tables/factorsTable.js";
+import YearSelector from "../components/yearSelector.js"
 
 const columns = [
   { headerName: "Rank", field: "rank", sortable: "true" },
@@ -16,7 +16,8 @@ const columns = [
 
 export default function Factors() {
   const [year,setYear] =useState('2020');
-
+  
+  
   return (
     <div>
       <div class="container">

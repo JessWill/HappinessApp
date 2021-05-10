@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import SearchBar from "./Components/search/searchBar";
-import useRankings from "./Components/search/useRankings";
-import DisplayTable from "./Components/tables/displayTable";
+import SearchBar from "../components/search/searchBar";
+import useRankings from "../components/search/useRankings";
+import DisplayTable from "../components/tables/displayTable";
 
 const columns = [
   { headerName: "Rank", field: "rank", sortable:"true"},

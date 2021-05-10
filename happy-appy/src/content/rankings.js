@@ -1,5 +1,5 @@
 import React from "react";
-import RankingsTable from "./Components/tables/rankingsTable";
+import RankingsTable from "../components/tables/rankingsTable";
 
 
 const columns = [
