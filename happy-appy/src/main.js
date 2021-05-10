@@ -23,10 +23,10 @@ class Main extends Component {
                 <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
                     <div id="navbarBasicExample" class="navbar-menu">
                         <div class="navbar-start">
-                        <NavLink to="/Home" class="navbar-item">Home</NavLink>
-                        <NavLink to="/rankings" class="navbar-item">Rankings</NavLink>
-                        <NavLink to="/factors" class="navbar-item">Factors</NavLink>
-                        <NavLink to="/search" class="navbar-item">Find Your Country</NavLink>
+                            <a class="navbar-item"><NavLink to="/Home" class="navbar-item">Home</NavLink></a>
+                            <a class="navbar-item"><NavLink to="/rankings" class="navbar-item">Rankings</NavLink></a>
+                            <a class="navbar-item"><NavLink to="/factors" class="navbar-item">Factors</NavLink></a>
+                            <a class="navbar-item"><NavLink to="/search" class="navbar-item">Find Your Country</NavLink></a>
                         </div>
                         <div class="navbar-end">
                             <div class="navbar-item">
@@ -39,6 +39,16 @@ class Main extends Component {
                         </div>
                     </div>
                 </nav>
+                <section class="hero is-warning">
+                    <div class="hero-body">
+                        <p class="title">
+                            The Happiness App
+                    </p>
+                        <p class="subtitle">
+                            View and Analyse Data from the United Nations World Happiness Report
+                    </p>
+                    </div>
+                </section>
                 <div className="content">
                                 <Route path="/Home" component={Home} />
                                 <Route path="/register" component={Register} />

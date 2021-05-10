@@ -15,16 +15,25 @@ export default function Search(){
   const { rankings } = useRankings(search);
 
   return (
-    <div>
+    <div class="body-container">
       <div class="container">
+        <br/>
+        <center>
         <h1>Find Out How Your Country Scored</h1>
+        </center>
+        <br/>
       </div>
       <div>
-        <SearchBar onSubmit={setSearch}/>
+        
       </div>
       <div>
+        <center>
+      <SearchBar onSubmit={setSearch}/>
+      <br/>
         <DisplayTable columns={columns} rows={rankings}/>
+        </center>
       </div>
+
     </div>
   );
 

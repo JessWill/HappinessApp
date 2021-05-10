@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FactorsTable from "../components/tables/factorsTable.js";
-import YearSelector from "../components/yearSelector.js"
+import YearSelector from "../components/tables/yearSelector.js"
 
 const columns = [
   { headerName: "Rank", field: "rank", sortable: "true" },
@@ -19,15 +19,17 @@ export default function Factors() {
   
   
   return (
-    <div>
+    <div class="body-container">
       <div class="container">
-        <h1>Factors</h1>
+        <br/>
+        <center><h1>Factors</h1></center>
+        <br/>
       </div>
-      <div>
-        <YearSelector onSubmit={setYear}/>
-      </div>
-      <div>
+      <div><center>
+      <YearSelector onSubmit={setYear}/>
+      <br/>
         <FactorsTable api="factors/" year={year} columns={columns} />
+        </center>
       </div>
     </div>
   );

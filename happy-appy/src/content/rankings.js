@@ -3,24 +3,27 @@ import RankingsTable from "../components/tables/rankingsTable";
 
 
 const columns = [
-  { headerName: "Rank", field: "rank", sortable:"true"},
-  { headerName: "Country", field: "country", sortable:"true", filter:"true"},
-  { headerName: "Score", field: "score", sortable:"true"},
-  { headerName: "Year", field: "year", sortable: "true"},
+  { headerName: "Rank", field: "rank", sortable: "true" },
+  { headerName: "Country", field: "country", sortable: "true", filter: "true" },
+  { headerName: "Score", field: "score", sortable: "true" },
+  { headerName: "Year", field: "year", sortable: "true" },
 ]
 
 
-export default function Rankings(){
+export default function Rankings() {
   return (
-    <div>
+    <div class="body-container">
       <div class="container">
-        <h1>Rankings</h1>
+        <br />
+        <center><h1>Rankings</h1></center>
+        <br />
       </div>
-
-      <div>
-        <RankingsTable api="rankings" columns={columns}/>
-      </div>
+      <center>
+        <div>
+          <RankingsTable api="rankings" columns={columns} />
+        </div>
+      </center>
     </div>
   );
 
-}  
+}

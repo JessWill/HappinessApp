@@ -1,5 +1,18 @@
 /*! bulma.io v0.9.2 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
+/* Begin Custom CSS */
+.body-container {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+.title-image {
+  max-width: 50vw;
+}
+.invisible{
+  width: 50px;
+  height: 5px;
+}
+/* End Custom CSS */
 .button, .input, .textarea, .select select, .file-cta,
 .file-name, .pagination-previous,
 .pagination-next,
