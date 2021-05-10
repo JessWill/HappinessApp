@@ -1,4 +1,5 @@
 import React from "react";
+import GetRankings from "../components/requests/getRankings";
 import RankingsTable from "../components/tables/rankingsTable";
 
 
@@ -9,8 +10,9 @@ const columns = [
   { headerName: "Year", field: "year", sortable: "true" },
 ]
 
-
 export default function Rankings() {
+  const { rankings } = GetRankings();
+
   return (
     <div class="body-container">
       <div class="container">

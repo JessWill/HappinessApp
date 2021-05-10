@@ -13,7 +13,7 @@ import Register from "./content/register";
 import Search from "./content/search";
 import PrivateRoute from "./routes/privateRoute";
 import Logout from "./content/logout";
-
+import Countries from "./content/countries";
 
 
 class Main extends Component {
@@ -27,6 +27,8 @@ class Main extends Component {
                             <a class="navbar-item"><NavLink to="/rankings" class="navbar-item">Rankings</NavLink></a>
                             <a class="navbar-item"><NavLink to="/factors" class="navbar-item">Factors</NavLink></a>
                             <a class="navbar-item"><NavLink to="/search" class="navbar-item">Find Your Country</NavLink></a>
+                            <a class="navbar-item"><NavLink to="/countries" class="navbar-item">Participating Countries</NavLink></a>
+
                         </div>
                         <div class="navbar-end">
                             <div class="navbar-item">
@@ -56,6 +58,7 @@ class Main extends Component {
                                 <PrivateRoute path="/rankings" component={Rankings}/>
                                 <PrivateRoute path="/factors" component={Factors} />
                                 <PrivateRoute path="/search" component={Search} />
+                                <PrivateRoute path="/countries" component={Countries} />
                                 <Route path="/Logout" component={Logout} />
                 </div>
             </HashRouter>
